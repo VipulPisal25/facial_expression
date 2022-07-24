@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="{{ url_for('static', filename='realtime.css') }}">
+	  <link rel="stylesheet" href="{{ url_for('static', filename='7.1 Grid.css') }}">
+	  <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+	  <title>Real Time Image Capture</title>
+	</head>
+
+	<body>
+		<header>
+		    <div class="row">
+				<h2>Capturing your Image</h2>
+			</div>
+			
+			<div class="row">
+				<div class="col span-1-of-2">
+					
+					<h4>Want to know your emotion? </h4>
+					<p>LETS SEE IT</p>
+					<img class="cam-img" src="{{url_for('static', filename='camera-100.png')}}">
+					<form action="/takeimage" method="post">
+		         	<input type="submit" name="Click the Photo" value="Click an Image" class="real-button" />
+		        	</form>	
+		        			
+				</div>
+				<div class="col span-1-of-2">
+					<img class="video-camera" src="{{ url_for('video_feed') }}">
+						
+				</div>
+				
+			</div>
+		</header>
+		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	
+	</body>
+	<footer>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <ul class="footer-nav">
+                            <li> <a href="#">About us</a></li>
+                            <li> <a href="#">blog</a></li>
+                            <li> <a href="#">feedback</a></li>
+                            <li> <a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <ul class="social-link">
+                            <li> <a href="#"><ion-icon name="logo-facebook" class="face-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-twitter" class="twit-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-google" class="google-logo"></ion-icon></i></a></li>
+                            <li> <a href="#"><ion-icon name="logo-instagram" class="insta-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-whatsapp" class="whatsapp-logo"></ion-icon></a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <p> 
+                        Copyright &copy; 2021 by VIPUL .  All right reserved.
+                        <br>This is website built for Software development project by Vipul Pisal.
+                    
+                    </p>
+                </div>
+            
+            </footer>
+</html>

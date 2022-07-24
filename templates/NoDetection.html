@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='nodetection.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='7.1 Grid.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="row">
+                <h2>Sorry We are not able to predict your Emotion</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <h4>Please capture another image</h4>
+                    <img class="no-img" src="{{url_for('static', filename='camera-48.png')}}">
+                    <form action="/RealTime" method="post">
+                    <input type="submit" name="Real Time Image" value="Predict Again" class="real-button" />
+                    </form> 
+                            
+                </div>
+            <div class="col span-1-of-2">
+                <img class="video-camera" src="/static/{{orig}}" alt="Original">
+                        
+            </div>
+                
+            </div>
+            
+        </header>
+    </body>
+
+</html>
+ 

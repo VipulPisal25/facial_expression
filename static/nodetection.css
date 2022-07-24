@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: #fff;
+  color:#555;
+  font-family: 'Lato',sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  text-rendering: optimizeLegibility;
+
+}
+header{
+  
+  background-image: linear-gradient(rgb(0, 0, 0,0.7),rgb(0, 0, 0,0.7)),url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.row{
+  
+    max-width: 1140px;
+    margin:0 auto;
+}
+h2{
+
+  margin-top: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 40px;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+
+}
+
+h2:after{
+  display: block;
+  height: 3px;
+  background-color: #de9e16;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+h4{
+  margin-top:20%;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 300;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  line-height: 145%;
+  
+}
+
+.video-camera{
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 35%;
+    padding: 15px 10px;
+    border: 5px solid  #EAB543;
+}
+
+.real-button{
+    padding: 25px 15px; 
+    margin-left: 35%;
+    margin-top: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #de9e16;
+    border-radius: 200px;
+    border: 1px solid  #de9e16;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+    font-weight: 400;
+}
+
+.no-img{
+    margin-left: 48%;
+    margin-top: 10px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static', filename='visual.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='7.1 Grid.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+      <title>Visualizing Prediction</title>
+    </head>
+
+    <body>
+      <header>
+        <nav>
+            <div class="row">
+              <ul class="main-nav">
+              <li><a href="#graphic">Graphical Visualization</a></li>
+              <li><a href="#musical">Music</a></li>
+              <li><a href="#acti">Activity</a></li>
+              </ul>
+            </div>
+
+        </nav>
+        <div class="row">
+          <h2 class="top">Here is the Prediction</h2>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-2">
+            <h3 class="top">Input Image</h3>
+            <img class="dot-icon" src="{{url_for('static', filename='dot.png')}}">
+            <img src="/static/{{orig}}" class="inout-img" alt="Original">
+            
+          </div>
+          <div class="col span-1-of-2">
+            <h3 class="top">Output image</h3>
+            <img class="dot-icon" src="{{url_for('static', filename='dot.png')}}">
+            <img src="/static/{{pred}}" class="inout-img" alt="Prediction">
+          </div>
+        </div>
+        
+      </header>
+      <section id="graphic">
+        <h2>Here is the graphical Visualization of prediction</h2>
+        <div class="row">
+          <img class="center" src="/static/{{bar}}" alt="Visualisation">
+        </div>
+        
+      </section >
+      <section id="musical" class="music">
+        <h2 class="top">This music will help you!</h2>
+        <div class="row">
+          <div class="row span-1-of-5">
+            <img src="{{url_for('static', filename='music.png')}}">
+            <audio controls class="music-sec1">
+              <source src="/static/music/{{music}}/music1.mp3" preload="auto" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="row span-1-of-5">
+            <audio controls class="music-sec">
+              <source src="/static/music/{{music}}/music2.mp3" preload="auto" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="row span-1-of-5" >
+            <audio controls class="music-sec1">
+              <source src="/static/music/{{music}}/music2.mp3" preload="auto" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="row span-1-of-5">
+            <audio controls class="music-sec">
+              <source src="/static/music/{{music}}/music2.mp3" preload="auto" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="row span-1-of-5">
+            <audio controls class="music-sec1">
+              <source src="/static/music/{{music}}/music2.mp3" preload="auto" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="activity" id="acti">
+        <div class="row">
+          <h2 class="top">Here is activity that will make your day</h2>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <h5 class="top2"> Suggested Activity</h5>
+            <p class="top2 act">{{activity}}</p>
+          </div>
+          <div class="col span-1-of-3">
+            <h5 class="top2">perform this Activity</h5>
+            <img class="link" src="{{url_for('static', filename='link2.png')}}">
+            <a href={{link}} target="_blank" class="real-button">Click here</a>
+
+          </div>
+          <div class="col span-1-of-3">
+            <h5 class="top2">&#128526 Here is your Emoji !! Click to download &#128526</h5>
+            <a href="/static/images/{{image}}/img.png" download>
+            <img src="/static/images/{{image}}/img.png" class="emoji" alt="Emoji">
+            </a>
+            
+          </div>
+        </div>
+
+      </section>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+    <footer>
+      <div class="row">
+          <div class="col span-1-of-2">
+              <ul class="footer-nav">
+                  <li> <a href="#">About us</a></li>
+                  <li> <a href="#">blog</a></li>
+                  <li> <a href="#">feedback</a></li>
+                  <li> <a href="#">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="col span-1-of-2">
+              <ul class="social-link">
+                  <li> <a href="#"><ion-icon name="logo-facebook" class="face-logo"></ion-icon></a></li>
+                  <li> <a href="#"><ion-icon name="logo-twitter" class="twit-logo"></ion-icon></a></li>
+                  <li> <a href="#"><ion-icon name="logo-google" class="google-logo"></ion-icon></i></a></li>
+                  <li> <a href="#"><ion-icon name="logo-instagram" class="insta-logo"></ion-icon></a></li>
+                  <li> <a href="#"><ion-icon name="logo-whatsapp" class="whatsapp-logo"></ion-icon></a></li>
+              
+              </ul>
+          </div>
+      </div>
+      <div class="row">
+          <p> 
+              Copyright &copy; 2021 by VIPUL .  All right reserved.
+              <br>This is website built for Software development project by Vipul Pisal.
+          
+          </p>
+      </div>
+            
+    </footer>
+
+</html>

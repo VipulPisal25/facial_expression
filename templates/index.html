@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='7.1 Grid.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+		<title>Facial Emotion Recognition</title>
+	</head>
+	<body>
+		<header>
+			  <nav>
+                <div class="row">
+                   <ul class="main-nav">
+                    <li><a href="#about">More About This Project</a></li>
+                    <li><a href="#upload">Upload</a></li>
+                    </ul>
+                </div>
+
+                </nav>
+			<div class="hero-text-box">
+				<h1>Emotion Recognition</h1>
+				<a class="btn btn-full" href="#real">Real Time Prediction</a>
+				<a class="btn btn-full" href="#upload">Upload Image</a>
+		    </div>
+		    <div>
+		    	<p class="para"><br>Expressions speaks more than words. Humans being able to recognize facial expressions is key to non-verbal communication. Due to this ability performing Facial Expression Recognition with computer vision enables a lot of application in field of human computer interaction.</p>
+		    </div>
+
+			
+		</header><!-- /header -->
+		
+		<section  id="about" class="js--section-features">
+			<h2> About the project</h2>
+			<div class="row">
+				<div class="col span-1-of-3 box">
+					<ion-icon name="bar-chart" class="icons"></ion-icon>
+					<h3>Output Window</h3>
+					<img class="img-size" src="{{url_for('static', filename='video.gif')}}">
+				</div>
+				<div class="col span-1-of-3 box">
+					<ion-icon name="analytics" class="icons"></ion-icon>
+					<h3>Model Accuracy</h3>
+					<img class="img-size" src="{{url_for('static', filename='accuracy.png')}}">
+				</div>
+				<div class="col span-1-of-3 box">
+					<ion-icon name="trending-down" class="icons"></ion-icon>
+					<h3 style="padding-left: 50px;">Model loss</h3>
+					<img class="img-size" src="{{url_for('static', filename='loss.png')}}">
+				</div>
+			</div>
+		</section>
+		<section class="info" class="real-time" id="real">
+			<div class="row">
+				<h2 class="top">Realtime Emotion Prediction</h2>
+			</div>
+			<div class="row">
+				<div class="col span-1-of-2">
+					<img class="comp-img" src="{{url_for('static', filename='real.png')}}">
+				</div>
+				<div class="col span-1-of-2">
+					<h4 class="top">Click here for realtime<br>&emsp;&emsp;&emsp;prediction</h4>
+					<ion-icon name="ellipsis-horizontal-outline" class="dot-icon"></ion-icon>
+					<form action="/RealTime" method="post">
+      				<input type="submit" name="Real Time Image" value="Real Time Image" class="real-button" />
+    				</form>				
+				</div>
+				
+			</div>
+			
+		</section>
+		<section class="real-time2" id="upload">
+			<div class="row">
+				<h2>Manually upload image</h2>
+			</div>
+			<div class="row">
+				<div class="col span-1-of-2">
+					<img src="{{url_for('static', filename='manual2.png')}}" class="comp-img">
+				</div>
+				<div class="col span-1-of-2">
+					<h4>Click here to upload image</h4>
+					<ion-icon name="ellipsis-horizontal-outline" class="dot-icon"></ion-icon>
+					<ion-icon name="images-outline" class="icon-glasses" ></ion-icon>
+					<form action="/ManualUpload" method="post">
+        			<input type="submit" name="Manually Upload Image" value="Manually Upload Image" class="real-button" />
+      				</form>			
+				</div>
+				
+			</div>
+			
+		</section>
+
+		
+    <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script>
+	</body>
+	<footer>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <ul class="footer-nav">
+                            <li> <a href="#">About us</a></li>
+                            <li> <a href="#">blog</a></li>
+                            <li> <a href="#">feedback</a></li>
+                            <li> <a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <ul class="social-link">
+                            <li> <a href="#"><ion-icon name="logo-facebook" class="face-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-twitter" class="twit-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-google" class="google-logo"></ion-icon></i></a></li>
+                            <li> <a href="#"><ion-icon name="logo-instagram" class="insta-logo"></ion-icon></a></li>
+                            <li> <a href="#"><ion-icon name="logo-whatsapp" class="whatsapp-logo"></ion-icon></a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <p> 
+                        Copyright &copy; 2021 by VIPUL .  All right reserved.
+                        <br>This is website built for Software development project by Vipul Pisal.
+                    
+                    </p>
+                </div>
+
+            </footer>
+</html>
